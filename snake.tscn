@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b1oova6tjfpj"]
+
+[ext_resource type="Script" uid="uid://c8wc2h14fsmpf" path="res://snake.gd" id="1_baghe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya8rp"]
+size = Vector2(40, 40)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_evpsf"]
+size = Vector2(40, 40)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1487395124]
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_baghe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1672532800]
+shape = SubResource("RectangleShape2D_ya8rp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=463090739]
+modulate = Color(1, 0, 0, 1)
+texture = SubResource("PlaceholderTexture2D_evpsf")
+
+[node name="Timer" type="Timer" parent="." unique_id=509640410]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

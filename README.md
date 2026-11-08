@@ -12,7 +12,7 @@ Hola, soy un README
 	- [ ] Contador de puntos
 
 **Arte**
-- [x ] Crear sprites del personaje
+- [x] Crear sprites del personaje
 - [ ] Crear sprite de grilla
 - [ ] Crear Sprite de la manzana 
 

@@ -5,8 +5,10 @@ Hola, soy un README
 
 **Mecánicas**
 
+- [x] Crear el mapa
 - [ ] Hacer las físicas del personaje
 - [ ] Hacer las mecánicas de las manzanas
+- [ ] Hacer las interacciones del snake con las manzanas
 - [ ] Crear elementos de UI
 	- [ ] Contador de tiempo
 	- [ ] Contador de puntos
@@ -17,5 +19,3 @@ Hola, soy un README
 - [ ] Crear Sprite de la manzana 
 
 
-# Cosas hechas
-- [x] Crear el mapa

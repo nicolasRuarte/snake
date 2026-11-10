@@ -1,7 +1,6 @@
 extends RigidBody2D
 
-
-const SPEED = 40
+const TILE_SIZE = 40
 
 enum STATE {
 	MOVING_UP,
@@ -19,7 +18,7 @@ func _physics_process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	match currentState :
 		STATE.MOVING_UP:
-			position.y -= SPEED
+			position += Vector2.UP * TILE_SIZE
 
 			if (Input.is_key_pressed(KEY_RIGHT)):
 				currentState = STATE.MOVING_RIGHT
@@ -29,7 +28,7 @@ func _on_timer_timeout() -> void:
 				pass
 
 		STATE.MOVING_RIGHT:
-			position.x += SPEED
+			position += Vector2.RIGHT * TILE_SIZE
 
 			if (Input.is_key_pressed(KEY_DOWN)):
 				currentState = STATE.MOVING_DOWN
@@ -38,7 +37,7 @@ func _on_timer_timeout() -> void:
 			if (Input.is_key_pressed(KEY_LEFT)):
 				pass
 		STATE.MOVING_DOWN:
-			position.y += SPEED
+			position += Vector2.DOWN * TILE_SIZE
 
 			if (Input.is_key_pressed(KEY_RIGHT)):
 				currentState = STATE.MOVING_RIGHT
@@ -48,7 +47,7 @@ func _on_timer_timeout() -> void:
 				pass
 			
 		STATE.MOVING_LEFT:
-			position.x -= SPEED
+			position += Vector2.LEFT * TILE_SIZE
 
 			if (Input.is_key_pressed(KEY_DOWN)):
 				currentState = STATE.MOVING_DOWN

@@ -15,7 +15,7 @@ Hola, soy un README
 
 **Arte**
 - [x] Crear sprites del personaje
-- [ ] Crear sprite de grilla
-- [ ] Crear Sprite de la manzana 
+- [x] Crear sprite de grilla
+- [x] Crear Sprite de la manzana 
 
 
